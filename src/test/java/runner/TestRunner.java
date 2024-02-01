@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         glue="step_definitions"   ,
         plugin = {
-                "json:target/jsonReports/cucumber.json"
+                "json:src/test/resources/jsonReports/cucumber.json"
         },
         tags = {"@Regression"}
 )
