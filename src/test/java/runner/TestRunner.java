@@ -1,29 +1,19 @@
 package runner;
 
-
-
-
-
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-import org.junit.After;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        dryRun = false,//Skip execution of glue code.
+        dryRun = false,
         features = "src/test/java/features",
         glue="step_definitions"   ,
         plugin = {
-                "json:target/jsonReports/cucumber.json"
+                "json:src/test/resources/jsonReports/cucumber.json"
         },
-        tags = {"@Regression"}
+        tags = "@Regression"
 )
 
-
 public class TestRunner{
-@After
-        public void takeScreenshot(){
-
-}
 }
