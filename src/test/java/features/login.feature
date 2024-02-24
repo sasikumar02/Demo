@@ -1,6 +1,10 @@
 Feature: automate amazon website
 
   @Regression @Browser
-  Scenario: Login amazon website
+  Scenario Outline: Login amazon website
   Given Launch the site
-    Then create user using "Create_Customer"
+    Then create user using "<testData>"
+
+    Examples:
+    |testData|
+    |Create_Customer|
