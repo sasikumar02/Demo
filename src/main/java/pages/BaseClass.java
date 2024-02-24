@@ -23,14 +23,14 @@ import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BaseClass {
-    public static WebDriver driver;
-    public void initializeBrowser(){
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-    }
+public class BaseClass extends DriverFactory{
+    //public static WebDriver driver;
+//    public void initializeBrowser(){
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        driver = new ChromeDriver(options);
+//    }
 public void launchURL(String url){
         System.out.println("url launched");
     driver.get(url);

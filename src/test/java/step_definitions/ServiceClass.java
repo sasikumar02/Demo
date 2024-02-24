@@ -2,6 +2,7 @@ package step_definitions;
 
 import io.cucumber.java.Scenario;
 import pages.BaseClass;
+import pages.DriverFactory;
 
 public class ServiceClass extends BaseClass {
     Scenario scenario = null;
@@ -11,8 +12,9 @@ public class ServiceClass extends BaseClass {
         this.scenario = scenario;
     }
     @io.cucumber.java.Before
-    public void initiateBrowser() {
-        initializeBrowser();
+    public void initiateBrowser() throws Exception {
+        //initializeBrowser();
+        DriverFactory.initialiseBrowser();
     }
     @io.cucumber.java.After
     public void after() throws Exception {
