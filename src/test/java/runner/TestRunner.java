@@ -11,8 +11,6 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         glue="step_definitions"   ,
         plugin = {
-                "com.epam.reportportal.cucumber.ScenarioReporter",
-               // "com.epam.reportportal.cucumber.StepReporter",
                 "json:src/test/resources/jsonReports/cucumber.json"
         },
         tags = "@Regression"

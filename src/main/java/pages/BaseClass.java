@@ -4,7 +4,6 @@ package pages;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import io.cucumber.core.logging.Logger;
 import io.cucumber.java.Scenario;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -12,7 +11,6 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
