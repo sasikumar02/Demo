@@ -104,7 +104,7 @@
                         <configuration>
                             <projectName>cucumber-jvm-example</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
-                            <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
+                            <inputDirectory>src/test/resources/jsonReports</inputDirectory>
                             <jsonFiles>
                                 <param>cucumber.json</param>
                             </jsonFiles>
