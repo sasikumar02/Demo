@@ -1,8 +1,10 @@
 package step_definitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import pages.BaseClass;
 import pages.DriverFactory;
+import pages.SendEmail;
 
 public class ServiceClass extends BaseClass {
     Scenario scenario = null;
@@ -21,6 +23,8 @@ public class ServiceClass extends BaseClass {
         closeBrowser(scenario);
         System.out.println("after step--"+publicURL);
         scenario.attach(publicURL,"text/plain","Browser Stack video Link");
+        System.out.println("before send email class");
+        SendEmail.sendEmailUsingJava();
     }
 
 //    @io.cucumber.java.After
