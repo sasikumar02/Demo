@@ -4,6 +4,7 @@ package pages;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import common.ConfigLoader;
 import io.cucumber.java.Scenario;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -30,13 +31,14 @@ public class BaseClass extends DriverFactory{
 //        options.addArguments("--remote-allow-origins=*");
 //        driver = new ChromeDriver(options);
 //    }
-public void launchURL(String url){
+public void launchURL(){
         System.out.println("url launched");
-    driver.get(url);
+        String url= ConfigLoader.getProperty("url");
+        driver.get(url);
 }
 
-    public void closeBrowser(Scenario scenario) throws Exception {
-        takeSnapShot(scenario);
+    public void closeBrowser() throws Exception {
+        //takeSnapShot(scenario);
         Thread.sleep(2000);
         driver.quit();
     }
